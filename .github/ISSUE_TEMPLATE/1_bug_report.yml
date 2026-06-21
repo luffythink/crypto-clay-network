@@ -7,9 +7,6 @@ body:
       value: >
         Before you go any further. Is this really a **🐛 bug**?
 
-        For environment and deployment questions, read `LOCAL_DEPLOYMENT.md`.
-        For content-update questions, read `CONTENT_OPERATIONS.md`.
-
   - type: checkboxes
     id: requirements
     attributes:
@@ -18,8 +15,6 @@ body:
         Please check if somebody else has already filed the same issue.
         If you find a similar issue, please add a 👍 reaction or comment on the original post.
       options:
-        - label: I checked `LOCAL_DEPLOYMENT.md` and `CONTENT_OPERATIONS.md`, and neither addressed my issue.
-          required: true
         - label: Yes, I have checked that this issue isn't already filed.
           required: true
 

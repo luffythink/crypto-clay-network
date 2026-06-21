@@ -10,3 +10,9 @@ assets/libs/
 node_modules/
 vendor
 .idea
+
+# Local maintenance documentation
+README_CN.md
+CONTENT_OPERATIONS.md
+GITHUB_PAGES_DEPLOYMENT.md
+LOCAL_DEPLOYMENT.md

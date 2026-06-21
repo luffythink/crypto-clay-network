@@ -7,8 +7,7 @@ body:
       value: >
         Before you go any further, are you sure that this feature is not already implemented?
 
-        Review `README.md`, `LOCAL_DEPLOYMENT.md`, and `CONTENT_OPERATIONS.md`
-        before proposing a new feature.
+        Review `README.md` before proposing a new feature.
 
   - type: checkboxes
     id: requirements

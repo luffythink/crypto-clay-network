@@ -1,39 +1,15 @@
-# 鱼凫共创 Hub
+# crypto-clay-network
 
-鱼凫共创从鱼凫文化出发，围绕陶艺、共食、阅读、骑行、城乡空间与社区活动，探索一种更有手感、更有关系、也更能持续发生的生活方式。
+This website forked [repo](https://github.com/alshedivat/al-folio/) from [al-folio](https://alshedivat.github.io/al-folio/) (**A simple, clean, and responsive [Jekyll](https://jekyllrb.com/) theme for academics.**) and then added some twist to it :)
 
-- 当前站点：[luffythink.github.io/crypto-clay-network](https://luffythink.github.io/crypto-clay-network/)
-- 第二阶段域名：`yunfuyao.art`（注册后切换）
-- 技术架构：Jekyll + GitHub Pages
+## Notes
 
-## 维护文档
+**For running locally:** Run `bundle exec jekyll serve` to generate the HTML and the local server will automatically rebuild and refresh the pages on change. You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
 
-- [GitHub Pages 上线指南](GITHUB_PAGES_DEPLOYMENT.md)
-- [本地部署指南](LOCAL_DEPLOYMENT.md)
-- [内容运营指南](CONTENT_OPERATIONS.md)
-
-## 本地预览
-
-```bash
-docker compose up
-```
-
-访问：
-
-```text
-http://0.0.0.0:8080/
-```
-
-## 内容入口
-
-| 板块 | 内容位置 |
-| --- | --- |
-| 工作坊 | `_workshops/` |
-| 陶艺笔记 | `_posts/` |
-| 作品 | `_works/` |
-| 生活 | `_data/gallery.yml` 与 `assets/img/gallery/` |
-| 我们 | `_pages/profiles.md` 与 `_pages/community-content/` |
+**Deploying with prettier:** Run `npx prettier . --check` to check for prettier formatting, `npx prettier . --write` to format all files.
 
 ## License
 
-主题基于 [al-folio](https://github.com/alshedivat/al-folio)，遵循项目现有 [MIT License](LICENSE)。
+The theme is available as open source under the terms of the [MIT License](https://github.com/alshedivat/al-folio/blob/main/LICENSE).
+
+Originally, **al-folio** was based on the [*folio theme](https://github.com/bogoli/-folio) (published by [Lia Bogoev](https://liabogoev.com/) and under the MIT license). Since then, it got a full re-write of the styles and many additional cool features.
