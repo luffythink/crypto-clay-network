@@ -487,6 +487,10 @@ html[data-theme="dark"] .workshops-background {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+
+  > .container {
+    position: relative;
+  }
 }
 
 .navbar .dropdown-menu {
@@ -629,6 +633,92 @@ html[data-theme="dark"] .workshops-background {
 
   .bottom-bar {
     transform: rotate(0);
+  }
+}
+
+@media (max-width: 767.98px) {
+  #navbarNav {
+    position: absolute;
+    top: calc(100% + 0.45rem);
+    right: 15px;
+    z-index: 1030;
+    width: max-content;
+    min-width: 9.5rem;
+    max-width: calc(100vw - 30px);
+    padding: 0.25rem 0;
+    overflow: hidden;
+    visibility: hidden;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.45rem;
+    background-color: var(--global-bg-color);
+    box-shadow: 0 0.55rem 1.25rem rgba(0, 0, 0, 0.16);
+    opacity: 0;
+    transform: scale(0.92);
+    transform-origin: 100% 0;
+    transition:
+      opacity 160ms ease,
+      transform 180ms cubic-bezier(0.5, 0.1, 0.51, 1.38),
+      visibility 0s linear 180ms;
+  }
+
+  #navbarNav.collapse:not(.show) {
+    display: block;
+    pointer-events: none;
+  }
+
+  #navbarNav.show {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0s;
+  }
+
+  #navbarNav .navbar-nav {
+    margin: 0 !important;
+  }
+
+  #navbarNav .nav-item {
+    min-width: 100%;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  #navbarNav .nav-link {
+    display: block;
+    padding: 0.65rem 1rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  #navbarNav .toggle-container {
+    padding: 0.45rem 1rem;
+    text-align: left;
+  }
+
+  #navbarNav #light-toggle {
+    width: 100%;
+    text-align: left;
+  }
+
+  #navbarNav .dropdown-menu {
+    position: static;
+    float: none;
+    min-width: 0;
+    margin: 0;
+    border-width: 1px 0 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #navbarNav,
+  .navbar-toggler .icon-bar {
+    transition: none;
   }
 }
 
