@@ -1,0 +1,154 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% assign collection = site[page.collection] | sort: 'date' %}
+{% if collection and collection.size > 0 %}
+  {% assign category_string = '' %}
+  {% for item in collection %}
+    {% for category in item.categories %}
+      {% assign category_token = category | append: '||' %}
+      {% unless category_string contains category_token %}
+        {% assign category_string = category_string | append: category_token %}
+      {% endunless %}
+    {% endfor %}
+  {% endfor %}
+  {% assign categories = category_string | split: '||' %}
+
+  <nav class="ceramics-bookshelf-filters" aria-label="书籍分类">
+    <button class="ceramics-bookshelf-filter active" type="button" data-category="all" aria-pressed="true">全部</button>
+    {% for category in categories %}
+      {% if category != '' %}
+        <button
+          class="ceramics-bookshelf-filter"
+          type="button"
+          data-category="{{ category | slugify }}"
+          aria-pressed="false"
+        >
+          {{ category }}
+        </button>
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  <div class="ceramics-bookshelf">
+    {% for item in collection %}
+      {% capture category_slugs %}
+        {% for category in item.categories %}{{ category | slugify }} {% endfor %}
+      {% endcapture %}
+      <a
+        class="ceramics-book"
+        href="{{ item.url | relative_url }}"
+        data-categories="{{ category_slugs | strip }}"
+        aria-label="查看{{ item.title }}，作者{{ item.author }}"
+      >
+        <img src="{{ item.cover | relative_url }}" alt="{{ item.title }}封面" loading="lazy">
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<style>
+  .ceramics-bookshelf-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 2rem 0 1.25rem;
+  }
+
+  .ceramics-bookshelf-filter {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 2rem;
+    color: var(--global-text-color);
+    background: var(--global-card-bg-color);
+    font-size: 0.88rem;
+    cursor: pointer;
+  }
+
+  .ceramics-bookshelf-filter:hover,
+  .ceramics-bookshelf-filter.active {
+    border-color: var(--global-theme-color);
+    color: var(--global-bg-color);
+    background: var(--global-theme-color);
+  }
+
+  .ceramics-bookshelf-filter:focus-visible {
+    outline: 3px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+
+  .ceramics-bookshelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(10rem, 42vw), 1fr));
+    gap: clamp(1rem, 3vw, 1.75rem);
+    align-items: start;
+  }
+
+  .ceramics-book {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 2 / 3;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    background: #eeeae2;
+    box-shadow: 0 0.35rem 1rem rgba(0, 0, 0, 0.08);
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .ceramics-book:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.14);
+  }
+
+  .ceramics-book:focus-visible {
+    outline: 3px solid var(--global-theme-color);
+    outline-offset: 3px;
+  }
+
+  .ceramics-book[hidden] {
+    display: none;
+  }
+
+  .ceramics-book img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ceramics-book {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filters = document.querySelectorAll('.ceramics-bookshelf-filter');
+    const books = document.querySelectorAll('.ceramics-book');
+
+    filters.forEach((button) => {
+      button.addEventListener('click', () => {
+        const selectedCategory = button.dataset.category;
+
+        filters.forEach((filter) => {
+          const isActive = filter === button;
+          filter.classList.toggle('active', isActive);
+          filter.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+
+        books.forEach((book) => {
+          const categories = book.dataset.categories.split(/\s+/);
+          book.hidden = selectedCategory !== 'all' && !categories.includes(selectedCategory);
+        });
+      });
+    });
+  });
+</script>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">自然肌理茶器细节示意</title>
+  <desc id="desc">陶杯表面呈现四季灵感的刻纹与局部釉色。</desc>
+  <rect width="1200" height="700" fill="#f3ede5"/>
+  <rect x="90" y="85" width="1020" height="530" rx="24" fill="#d9c1ad"/>
+  <path d="M365 160c20-65 260-65 280 0l-24 342c-6 60-226 60-232 0Z" fill="#a96146"/>
+  <ellipse cx="505" cy="160" rx="140" ry="38" fill="#d29471"/>
+  <ellipse cx="505" cy="161" rx="105" ry="22" fill="#634238"/>
+  <path d="M620 245c105-27 147 46 131 112-15 65-73 94-139 62" fill="none" stroke="#a96146" stroke-width="36" stroke-linecap="round"/>
+  <g fill="none" stroke="#e0b794" stroke-width="8" stroke-linecap="round" opacity=".8">
+    <path d="M420 245c45 22 95 22 170 0"/>
+    <path d="M410 307c53 25 110 25 190 0"/>
+    <path d="M406 373c56 25 120 25 196 0"/>
+    <path d="M418 438c46 21 105 21 170 0"/>
+  </g>
+  <g transform="translate(825 170)" fill="none" stroke="#6f7957" stroke-width="11" stroke-linecap="round">
+    <path d="M0 300c70-95 110-190 128-300"/>
+    <path d="M47 230c-38-26-57-58-59-93"/>
+    <path d="M76 170c45-18 73-48 84-90"/>
+  </g>
+  <g fill="#87916a">
+    <ellipse cx="825" cy="405" rx="55" ry="24" transform="rotate(25 825 405)"/>
+    <ellipse cx="950" cy="296" rx="60" ry="25" transform="rotate(-28 950 296)"/>
+    <ellipse cx="899" cy="363" rx="49" ry="21" transform="rotate(18 899 363)"/>
+  </g>
+  <text x="815" y="535" fill="#654e43" font-family="sans-serif" font-size="28">纹理由手、泥与时间共同留下</text>
+</svg>

@@ -1,0 +1,32 @@
+- url: kiln-and-hands.jpg
+  alt: "龙窑、工作室、陶壶和拉坯过程组成的拼贴画面"
+  title: "窑火与手"
+  caption: "从工作室入口、装窑和烧成，到泥在双手之间逐渐成为器物。窑火并不是制作的终点，它让时间、材料与人的判断在同一件器物上留下痕迹。"
+  date: "2026年6月"
+  location: "成都温江"
+  category: "窑与工作室"
+  credit: "鱼凫窑拍摄"
+  orientation: landscape
+  featured: true
+
+- url: broken-vessel-study.jpg
+  alt: "一把破损陶壶的碎片与拼合过程"
+  title: "碎片重新相遇"
+  caption: "破损让器物内部的泥层、连接和烧成状态显露出来。重新拼合并不是为了隐藏裂缝，而是借由碎片观察一件器物如何被制作，又如何在时间里发生变化。"
+  date: "2026年6月"
+  location: "成都温江"
+  category: "器物观察"
+  credit: "鱼凫窑拍摄"
+  orientation: landscape
+  featured: false
+
+- url: ceramic-art-notes.jpg
+  alt: "陶艺活动、器物、拉坯和修坯过程组成的拼贴画面"
+  title: "慢下来，回到手上"
+  caption: "陶艺的日常由许多细小动作组成：揉泥、拉坯、修整、记录、等待和烧成。手在重复中变得敏锐，生活也在一次次触碰材料时重新获得具体的尺度。"
+  date: "2026年6月"
+  location: "成都温江"
+  category: "陶艺日常"
+  credit: "鱼凫窑拍摄"
+  orientation: square
+  featured: false

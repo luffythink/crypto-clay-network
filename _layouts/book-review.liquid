@@ -1,0 +1,100 @@
+---
+layout: default
+---
+
+<div class="post ceramics-book-review">
+  <header class="post-header">
+    <p><a href="{{ '/books/' | relative_url }}">← 返回陶艺书架</a></p>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.original_title %}
+      <p class="ceramics-book-review__original">{{ page.original_title }}</p>
+    {% endif %}
+    <p class="post-meta">
+      {{ page.author }}
+      {% if page.released %} · 初版 {{ page.released }}{% endif %}
+    </p>
+  </header>
+
+  <article class="ceramics-book-review__content">
+    {% if page.cover %}
+      <figure>
+        <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}封面">
+        {% if page.cover_source %}
+          <figcaption>
+            封面资料：<a href="{{ page.cover_source }}" target="_blank" rel="noopener noreferrer">Open Library</a>
+          </figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
+    <div>
+      {{ content }}
+
+      {% if page.tags %}
+        <p class="ceramics-book-review__tags">
+          {% for tag in page.tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  </article>
+</div>
+
+<style>
+  .ceramics-book-review__original {
+    margin: -0.4rem 0 0.5rem;
+    color: var(--global-text-color-light);
+  }
+
+  .ceramics-book-review__content {
+    display: grid;
+    grid-template-columns: minmax(13rem, 28%) 1fr;
+    gap: clamp(1.5rem, 5vw, 3rem);
+    align-items: start;
+    margin-top: 2rem;
+  }
+
+  .ceramics-book-review__content figure {
+    margin: 0;
+  }
+
+  .ceramics-book-review__content img {
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+
+  .ceramics-book-review__content figcaption {
+    margin-top: 0.5rem;
+    color: var(--global-text-color-light);
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .ceramics-book-review__content h2:first-child {
+    margin-top: 0;
+  }
+
+  .ceramics-book-review__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .ceramics-book-review__tags span {
+    padding: 0.25rem 0.65rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 1rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 640px) {
+    .ceramics-book-review__content {
+      grid-template-columns: 1fr;
+    }
+
+    .ceramics-book-review__content figure {
+      max-width: 15rem;
+    }
+  }
+</style>

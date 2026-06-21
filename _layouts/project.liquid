@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="post project-detail">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.description %}
+      <p class="post-description">{{ page.description }}</p>
+    {% endif %}
+    <p class="post-meta">
+      创作于 {{ page.date | date: '%Y年%-m月%-d日' }}
+      {% if page.last_updated %}&nbsp;·&nbsp;更新于 {{ page.last_updated | date: '%Y年%-m月%-d日' }}{% endif %}
+      {% if page.creator %}&nbsp;·&nbsp;创作者：{{ page.creator }}{% endif %}
+    </p>
+
+    {% if page.tags %}
+      <p class="post-tags">
+        {% for tag in page.tags %}
+          <span><i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</span>
+          {% unless forloop.last %}&nbsp;{% endunless %}
+        {% endfor %}
+      </p>
+    {% endif %}
+  </header>
+
+  {% if page.img %}
+    <div class="project-cover mb-4">
+      {% include figure.liquid loading="eager" path=page.img alt=page.title class="img-fluid rounded z-depth-1" %}
+    </div>
+  {% endif %}
+
+  <section class="project-facts" aria-label="作品档案">
+    <h2>作品档案</h2>
+    <dl>
+      {% if page.creator %}<div><dt>创作者</dt><dd>{{ page.creator }}</dd></div>{% endif %}
+      {% if page.studio %}<div><dt>工作室</dt><dd>{{ page.studio }}</dd></div>{% endif %}
+      {% if page.location %}<div><dt>创作地点</dt><dd>{{ page.location }}</dd></div>{% endif %}
+      {% if page.materials %}<div><dt>材料</dt><dd>{{ page.materials }}</dd></div>{% endif %}
+      {% if page.technique %}<div><dt>工艺</dt><dd>{{ page.technique }}</dd></div>{% endif %}
+      {% if page.dimensions %}<div><dt>尺寸</dt><dd>{{ page.dimensions }}</dd></div>{% endif %}
+      {% if page.firing %}<div><dt>烧成</dt><dd>{{ page.firing }}</dd></div>{% endif %}
+      {% if page.status %}<div><dt>状态</dt><dd>{{ page.status }}</dd></div>{% endif %}
+      {% if page.category %}<div><dt>分类</dt><dd>{{ page.category }}</dd></div>{% endif %}
+    </dl>
+  </section>
+
+  <article class="post-content">
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+  </article>
+</div>

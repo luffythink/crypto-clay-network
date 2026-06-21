@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">慢下来：自然肌理茶器组封面示意</title>
+  <desc id="desc">暖色桌面上摆放着一只陶壶、两只茶杯和自然枝叶。</desc>
+  <rect width="1200" height="900" fill="#eee4d8"/>
+  <circle cx="1040" cy="120" r="230" fill="#d7c7ad" opacity=".65"/>
+  <path d="M0 640c210-70 350 20 530-25 220-55 390-20 670 55v230H0Z" fill="#b78a6f"/>
+  <ellipse cx="615" cy="690" rx="410" ry="70" fill="#6e4b3b" opacity=".18"/>
+  <path d="M458 345c28-93 285-93 314 0l-30 246c-8 68-246 68-254 0Z" fill="#a96348"/>
+  <ellipse cx="615" cy="344" rx="157" ry="48" fill="#c98563"/>
+  <ellipse cx="615" cy="345" rx="118" ry="27" fill="#5d4035"/>
+  <path d="M748 410c112-35 170 30 157 108-12 76-89 116-172 70" fill="none" stroke="#a96348" stroke-width="42" stroke-linecap="round"/>
+  <path d="M508 425c66 30 151 30 216 0M500 495c72 31 161 31 231 0" fill="none" stroke="#d8ad88" stroke-width="9" stroke-linecap="round" opacity=".65"/>
+  <path d="M238 510c12-43 166-43 178 0l-18 151c-5 40-137 40-142 0Z" fill="#bd7958"/>
+  <ellipse cx="327" cy="510" rx="89" ry="27" fill="#d99d79"/>
+  <ellipse cx="327" cy="511" rx="65" ry="15" fill="#634438"/>
+  <path d="M835 540c10-37 145-37 156 0l-16 132c-4 35-120 35-124 0Z" fill="#c48662"/>
+  <ellipse cx="913" cy="540" rx="78" ry="23" fill="#dfa888"/>
+  <ellipse cx="913" cy="541" rx="56" ry="13" fill="#67463a"/>
+  <path d="M104 240c95 5 152 65 197 142M150 190c52 76 58 145 56 225" fill="none" stroke="#76825c" stroke-width="15" stroke-linecap="round"/>
+  <g fill="#87936b">
+    <ellipse cx="150" cy="225" rx="58" ry="26" transform="rotate(28 150 225)"/>
+    <ellipse cx="217" cy="288" rx="62" ry="27" transform="rotate(-22 217 288)"/>
+    <ellipse cx="126" cy="330" rx="55" ry="24" transform="rotate(22 126 330)"/>
+  </g>
+  <text x="90" y="110" fill="#5b4438" font-family="sans-serif" font-size="48" font-weight="700">慢下来</text>
+  <text x="92" y="165" fill="#806458" font-family="sans-serif" font-size="27">自然肌理茶器组 · 概念图</text>
+</svg>

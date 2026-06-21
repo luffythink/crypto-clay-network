@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="title desc">
+  <title id="title">微信二维码占位</title>
+  <desc id="desc">不可扫描的微信二维码占位图，请替换为真实二维码。</desc>
+  <rect width="320" height="320" rx="20" fill="#fff"/>
+  <g fill="#111">
+    <path d="M32 32h76v76H32zm16 16v44h44V48zm12 12h20v20H60z"/>
+    <path d="M212 32h76v76h-76zm16 16v44h44V48zm12 12h20v20h-20z"/>
+    <path d="M32 212h76v76H32zm16 16v44h44v-44zm12 12h20v20H60z"/>
+    <rect x="132" y="36" width="16" height="16"/>
+    <rect x="164" y="36" width="16" height="16"/>
+    <rect x="148" y="52" width="16" height="16"/>
+    <rect x="124" y="76" width="16" height="16"/>
+    <rect x="164" y="76" width="24" height="16"/>
+    <rect x="124" y="116" width="24" height="16"/>
+    <rect x="164" y="116" width="16" height="24"/>
+    <rect x="196" y="124" width="24" height="16"/>
+    <rect x="236" y="124" width="16" height="24"/>
+    <rect x="268" y="124" width="16" height="16"/>
+    <rect x="36" y="132" width="16" height="24"/>
+    <rect x="68" y="124" width="24" height="16"/>
+    <rect x="100" y="148" width="16" height="24"/>
+    <rect x="132" y="156" width="16" height="16"/>
+    <rect x="172" y="156" width="24" height="16"/>
+    <rect x="220" y="164" width="16" height="24"/>
+    <rect x="260" y="164" width="24" height="16"/>
+    <rect x="124" y="196" width="16" height="24"/>
+    <rect x="156" y="188" width="24" height="16"/>
+    <rect x="196" y="204" width="16" height="16"/>
+    <rect x="236" y="196" width="16" height="24"/>
+    <rect x="268" y="212" width="16" height="16"/>
+    <rect x="124" y="236" width="24" height="16"/>
+    <rect x="164" y="228" width="16" height="24"/>
+    <rect x="196" y="244" width="24" height="16"/>
+    <rect x="236" y="236" width="16" height="16"/>
+    <rect x="268" y="260" width="16" height="24"/>
+  </g>
+  <rect x="58" y="140" width="204" height="44" rx="8" fill="#fff" stroke="#111" stroke-width="4"/>
+  <text x="160" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" font-weight="700" fill="#111">WECHAT PLACEHOLDER</text>
+</svg>

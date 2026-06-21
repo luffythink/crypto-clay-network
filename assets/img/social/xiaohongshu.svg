@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">小红书</title>
+  <rect x="6" y="10" width="52" height="44" rx="13" fill="#ff2442"/>
+  <path fill="#fff" d="M17 23h30v5H17zm0 13h30v5H17z"/>
+  <circle cx="24" cy="25.5" r="5.5" fill="#fff"/>
+  <circle cx="40" cy="38.5" r="5.5" fill="#fff"/>
+</svg>

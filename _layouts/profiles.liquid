@@ -1,0 +1,78 @@
+---
+layout: page
+---
+<div class="post">
+  <article>
+    {% if page.profiles %}
+      <div class="community-grid">
+        {% for profile in page.profiles %}
+          <details class="community-member">
+            <summary class="community-member__summary">
+              <div class="community-member__media">
+                {% if profile.image %}
+                  {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
+                  {% assign profile_image_alt = profile.image_alt | default: profile.name %}
+                  {% capture sizes %}(min-width: 992px) 30vw, (min-width: 768px) 48vw, 95vw{% endcapture %}
+                  {% include figure.liquid loading="eager" path=profile_image_path class="community-member__image" sizes=sizes alt=profile_image_alt %}
+                {% endif %}
+                <div class="community-member__overlay">
+                  <h2>{{ profile.name }}</h2>
+                  <p class="community-member__role">{{ profile.role }}</p>
+                  <span class="community-member__action">查看介绍</span>
+                </div>
+              </div>
+            </summary>
+            <div class="community-member__content">
+              {% if profile.content %}
+                {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
+                {{ profile_content | markdownify }}
+              {% endif %}
+            </div>
+          </details>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if page.location %}
+      <section class="community-location" aria-labelledby="community-location-title">
+        <div class="community-location__header">
+          <div>
+            <h2 id="community-location-title">我们在哪里</h2>
+            <p>
+              <strong>{{ page.location.name }}</strong>
+              <span>{{ page.location.address }}</span>
+            </p>
+          </div>
+          {% if page.location.navigation_url %}
+            <a href="{{ page.location.navigation_url }}" target="_blank" rel="noopener noreferrer">
+              打开地图导航
+              <i class="ti ti-external-link" aria-hidden="true"></i>
+            </a>
+          {% endif %}
+        </div>
+        {% if page.location.image %}
+          {% assign location_image_path = page.location.image | prepend: 'assets/img/' %}
+          {% if page.location.navigation_url %}
+            <a
+              class="community-location__image-link"
+              href="{{ page.location.navigation_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="在高德地图中查看{{ page.location.name }}"
+            >
+          {% endif %}
+          {% include figure.liquid
+             loading="lazy"
+             path=location_image_path
+             class="community-location__image"
+             sizes="(min-width: 930px) 900px, 95vw"
+             alt=page.location.image_alt
+          %}
+          {% if page.location.navigation_url %}
+            </a>
+          {% endif %}
+        {% endif %}
+      </section>
+    {% endif %}
+  </article>
+</div>

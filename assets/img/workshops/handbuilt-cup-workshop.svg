@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">手捏杯工作坊示意图</title>
+  <desc id="desc">暖色背景上，一双手正在制作带把手的陶杯。</desc>
+  <rect width="1200" height="675" fill="#f4ebe4"/>
+  <circle cx="1030" cy="105" r="170" fill="#e7cec0" opacity=".7"/>
+  <path d="M0 530C210 470 330 560 515 515s330-35 685 35v125H0Z" fill="#d7b29f"/>
+  <ellipse cx="600" cy="550" rx="310" ry="45" fill="#b88369" opacity=".35"/>
+  <path d="M445 235c15-48 294-48 310 0l-28 266c-5 48-249 48-254 0Z" fill="#b96f4f"/>
+  <ellipse cx="600" cy="235" rx="155" ry="42" fill="#d59170"/>
+  <ellipse cx="600" cy="236" rx="122" ry="26" fill="#694438"/>
+  <path d="M742 305c105-25 153 36 142 105-10 67-78 105-157 68" fill="none" stroke="#b96f4f" stroke-width="38" stroke-linecap="round"/>
+  <path d="M326 474c-77-37-113-92-79-131 35-41 112 7 188 83l31 31-38 78Z" fill="#d6a080"/>
+  <path d="M874 474c77-37 113-92 79-131-35-41-112 7-188 83l-31 31 38 78Z" fill="#d6a080"/>
+  <path d="M364 389c29 12 58 38 91 70M836 389c-29 12-58 38-91 70" fill="none" stroke="#bd8063" stroke-width="12" stroke-linecap="round"/>
+  <path d="M525 335c48 18 102 18 150 0M510 397c58 20 122 20 180 0" fill="none" stroke="#9a553e" stroke-width="8" stroke-linecap="round" opacity=".55"/>
+  <text x="70" y="105" fill="#67443a" font-family="sans-serif" font-size="42" font-weight="700">从泥到器</text>
+  <text x="72" y="154" fill="#8b6255" font-family="sans-serif" font-size="25">手捏杯工作坊</text>
+</svg>
