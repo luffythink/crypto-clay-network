@@ -46,22 +46,34 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
-    <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
-      <h2>
-        <a href="{{ '/workshops/' | relative_url }}" style="color: inherit">工作坊</a>
-      </h2>
-      {% include workshops.liquid limit=true %}
-    {% endif %}
+    {% if page.announcements.enabled or page.latest_posts.enabled %}
+      <section class="home-board" aria-label="鱼凫共创公告板">
+        <span class="home-board__pin" aria-hidden="true">
+          <i class="ti ti-pin-filled"></i>
+        </span>
 
-    <!-- Latest posts -->
-    {% if page.latest_posts and page.latest_posts.enabled %}
-      <h2>
-        <a href="{{ '/notes/' | relative_url }}" style="color: inherit">
-          {{- page.latest_posts.title | default: '最新文章' -}}
-        </a>
-      </h2>
-      {% include latest_posts.liquid %}
+        <!-- News -->
+        {% if page.announcements and page.announcements.enabled %}
+          <div class="home-board__section">
+            <h2 class="home-board__title">
+              <a href="{{ '/workshops/' | relative_url }}">工作坊</a>
+            </h2>
+            {% include workshops.liquid limit=true %}
+          </div>
+        {% endif %}
+
+        <!-- Latest posts -->
+        {% if page.latest_posts and page.latest_posts.enabled %}
+          <div class="home-board__section">
+            <h2 class="home-board__title">
+              <a href="{{ '/notes/' | relative_url }}">
+                {{- page.latest_posts.title | default: '最新文章' -}}
+              </a>
+            </h2>
+            {% include latest_posts.liquid %}
+          </div>
+        {% endif %}
+      </section>
     {% endif %}
 
     <!-- Social -->
