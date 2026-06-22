@@ -61,12 +61,13 @@ layout: page
               aria-label="在高德地图中查看{{ page.location.name }}"
             >
           {% endif %}
-          {% include figure.liquid
-             loading="lazy"
-             path=location_image_path
-             class="community-location__image"
-             sizes="(min-width: 930px) 900px, 95vw"
-             alt=page.location.image_alt
+          {%
+            include figure.liquid
+            loading="lazy"
+            path=location_image_path
+            class="community-location__image"
+            sizes="(min-width: 930px) 900px, 95vw"
+            alt=page.location.image_alt
           %}
           {% if page.location.navigation_url %}
             </a>

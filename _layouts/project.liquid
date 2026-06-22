@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="post project-detail">
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
@@ -33,15 +32,60 @@ layout: default
   <section class="project-facts" aria-label="作品档案">
     <h2>作品档案</h2>
     <dl>
-      {% if page.creator %}<div><dt>创作者</dt><dd>{{ page.creator }}</dd></div>{% endif %}
-      {% if page.studio %}<div><dt>工作室</dt><dd>{{ page.studio }}</dd></div>{% endif %}
-      {% if page.location %}<div><dt>创作地点</dt><dd>{{ page.location }}</dd></div>{% endif %}
-      {% if page.materials %}<div><dt>材料</dt><dd>{{ page.materials }}</dd></div>{% endif %}
-      {% if page.technique %}<div><dt>工艺</dt><dd>{{ page.technique }}</dd></div>{% endif %}
-      {% if page.dimensions %}<div><dt>尺寸</dt><dd>{{ page.dimensions }}</dd></div>{% endif %}
-      {% if page.firing %}<div><dt>烧成</dt><dd>{{ page.firing }}</dd></div>{% endif %}
-      {% if page.status %}<div><dt>状态</dt><dd>{{ page.status }}</dd></div>{% endif %}
-      {% if page.category %}<div><dt>分类</dt><dd>{{ page.category }}</dd></div>{% endif %}
+      {% if page.creator %}
+        <div>
+          <dt>创作者</dt>
+          <dd>{{ page.creator }}</dd>
+        </div>
+      {% endif %}
+      {% if page.studio %}
+        <div>
+          <dt>工作室</dt>
+          <dd>{{ page.studio }}</dd>
+        </div>
+      {% endif %}
+      {% if page.location %}
+        <div>
+          <dt>创作地点</dt>
+          <dd>{{ page.location }}</dd>
+        </div>
+      {% endif %}
+      {% if page.materials %}
+        <div>
+          <dt>材料</dt>
+          <dd>{{ page.materials }}</dd>
+        </div>
+      {% endif %}
+      {% if page.technique %}
+        <div>
+          <dt>工艺</dt>
+          <dd>{{ page.technique }}</dd>
+        </div>
+      {% endif %}
+      {% if page.dimensions %}
+        <div>
+          <dt>尺寸</dt>
+          <dd>{{ page.dimensions }}</dd>
+        </div>
+      {% endif %}
+      {% if page.firing %}
+        <div>
+          <dt>烧成</dt>
+          <dd>{{ page.firing }}</dd>
+        </div>
+      {% endif %}
+      {% if page.status %}
+        <div>
+          <dt>状态</dt>
+          <dd>{{ page.status }}</dd>
+        </div>
+      {% endif %}
+      {% if page.category %}
+        <div>
+          <dt>分类</dt>
+          <dd>{{ page.category }}</dd>
+        </div>
+      {% endif %}
     </dl>
   </section>
 

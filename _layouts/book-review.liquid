@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div class="post ceramics-book-review">
   <header class="post-header">
     <p><a href="{{ '/books/' | relative_url }}">← 返回陶艺书架</a></p>
@@ -20,9 +19,7 @@ layout: default
       <figure>
         <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}封面">
         {% if page.cover_source %}
-          <figcaption>
-            封面资料：<a href="{{ page.cover_source }}" target="_blank" rel="noopener noreferrer">Open Library</a>
-          </figcaption>
+          <figcaption>封面资料：<a href="{{ page.cover_source }}" target="_blank" rel="noopener noreferrer">Open Library</a></figcaption>
         {% endif %}
       </figure>
     {% endif %}

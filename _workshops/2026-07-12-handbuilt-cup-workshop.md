@@ -58,4 +58,4 @@ related_posts: false
 
 ## 报名方式
 
-[前往飞书查看活动说明并报名](https://my.feishu.cn/wiki/SyhawYaZIiwtMVkh5uscWdFVnDg){:target="_blank" rel="noopener noreferrer"}
+[前往飞书查看活动说明并报名](https://my.feishu.cn/wiki/SyhawYaZIiwtMVkh5uscWdFVnDg){:target="\_blank" rel="noopener noreferrer"}
